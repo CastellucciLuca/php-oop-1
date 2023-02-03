@@ -1,0 +1,10 @@
+main {
+    background-color: rgb(39, 39, 39);
+    height: 90vh;
+}
+.card{
+    margin-right: 1rem;
+}
+.row-cards-movie .card img {
+    width: 200px;
+}

@@ -2,26 +2,45 @@
 
 class Movie
 {
-    public $bannerPath;
-    public $title;
-    public $year;
-    public $lenght;
-    public $genre;
-
+    private $title;
+    private $genre;
+    private $typeMovie;
+    private $cover;
+    private $year;
+    private $lenght;
     
-    public function __construct($_bannerPath, $_title, $_year, $_lenght,  $_genre)
+    function __construct($title,$genre,$typeMovie,$cover,$lenght,$year)
     {
-        $this->bannerPath = $_bannerPath;
-        $this->title = $_title;
-        $this->year = $_year;
-        $this->lenght = $_lenght;
-        $this->genre = $_genre;
+        $this->title = $title;
+        $this->genre = $genre;
+        $this->typeMovie = $typeMovie;
+        $this->cover = $cover;
+        $this->lenght = $lenght;
+        $this->year = $year;
     }
-    public function defaultImgPath()
-    {
-        if ($this->bannerPath == '#') {
-            $this->bannerPath = 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png';
-        }
-        return $this->bannerPath;
+
+    public function getTitle() {
+        echo $this->title;
+    }
+
+    public function getGenre() {
+        echo $this->genre;
+    }
+
+    public function getTypeMovie() {
+        echo $this->typeMovie;
+    }
+
+    public function getCover() {
+        echo $this->cover;
+    }
+
+    public function getLenght() {
+        echo $this->lenght;
+    }
+
+    public function getYear() {
+        echo $this->year;
     }
 }
+?>
